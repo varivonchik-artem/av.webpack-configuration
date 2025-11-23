@@ -28,5 +28,21 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  return [typescriptLoaders, cssLoaders];
+  const imagesLoader: webpack.RuleSetRule = {
+    test: /\.(png|jpe?g|gif|svg)$/i,
+    type: "asset/resource",
+    generator: {
+      filename: "images/[name][ext][query]",
+    },
+  };
+
+  const fontsLoader: webpack.RuleSetRule = {
+    test: /\.(woff2?|ttf|eot)$/,
+    type: "asset/resource",
+    generator: {
+      filename: "fonts/[name][ext][query]",
+    },
+  };
+
+  return [typescriptLoaders, cssLoaders, imagesLoader, fontsLoader];
 }
