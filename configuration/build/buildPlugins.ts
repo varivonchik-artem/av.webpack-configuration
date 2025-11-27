@@ -1,5 +1,6 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import { BuildOptions } from "../types/configurationTypes";
 
 export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
@@ -11,5 +12,6 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
       favicon: paths.favicon,
     }),
     new webpack.ProgressPlugin(),
+    new BundleAnalyzerPlugin(),
   ];
 }
