@@ -4,7 +4,7 @@ import { BuildEnvironmentVariables, BuildPaths } from "./configuration/types/con
 
 export default (env: BuildEnvironmentVariables) => {
   const PATHS: BuildPaths = {
-    entry: path.resolve(__dirname, "src", "index.ts"),
+    entry: path.resolve(__dirname, "src", "index.tsx"),
     build: path.resolve(__dirname, "build"),
     html: path.resolve(__dirname, "public", "index.html"),
   };
