@@ -22,7 +22,7 @@ export default defineConfig([
     settings: {
       "import/resolver": {
         node: {
-          extensions: [".js", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts"],
+          extensions: [".js", ".jsx", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts"],
         },
         typescript: {
           project: true,

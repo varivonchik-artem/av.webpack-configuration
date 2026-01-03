@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div>1s</div>
+      <div>1</div>
     </BrowserRouter>
   </React.StrictMode>
 );
