@@ -1,10 +1,5 @@
-import { useEffect } from "react";
-
 const MainPage = () => {
-  useEffect(() => {
-    throw new Error();
-  }, []);
-  return "main-page";
+  return <div className="container">123</div>;
 };
 
 export default MainPage;

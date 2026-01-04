@@ -1,0 +1,15 @@
+@use "../helpers/media" as *;
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container-width) + (var(--container-padding-x) * 2));
+
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.hidden-tablet-landscape-up {
+  @include breakpoint-up("tablet-landscape") {
+    display: none !important;
+  }
+}
