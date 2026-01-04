@@ -1,17 +1,14 @@
 import React from "react";
+import { appRouter } from "@app/providers/router";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 
-import Logo from "./black.svg";
-import LogoUrl from "./black.svg?url";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Logo />
-      <img src={LogoUrl} alt="User" width={50} height={50} />
-    </BrowserRouter>
+    <React.Suspense fallback={<div>Loading:)</div>}>
+      <RouterProvider router={appRouter} />
+    </React.Suspense>
   </React.StrictMode>
 );
