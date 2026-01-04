@@ -1,3 +1,4 @@
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import webpack from "webpack";
@@ -9,6 +10,10 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
   return [
     new HtmlWebpackPlugin({
       template: paths.html,
+      favicon: paths.favicon,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "public", to: "", globOptions: { ignore: ["**/index.html"] } }],
     }),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({

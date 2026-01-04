@@ -24,9 +24,6 @@ export default defineConfig([
         node: {
           extensions: [".js", ".jsx", ".mjs", ".cjs", ".ts", ".tsx", ".mts", ".cts"],
         },
-        typescript: {
-          project: true,
-        },
       },
     },
 
